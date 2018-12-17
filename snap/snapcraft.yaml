@@ -1,0 +1,20 @@
+name: gitmoji
+base: core18
+version: git
+summary: A gitmoji interactive command line tool for using emojis on commits
+description: |
+  This project provides an easy solution for using gitmoji from your command
+  line. Gitmoji-cli solves the hassle of searching through the gitmoji list.
+  Includes a bunch of options you can play with! 🎉
+
+grade: stable
+confinement: classic
+
+parts:
+  gitmoji:
+    plugin: nodejs
+    source: .
+
+apps:
+  gitmoji:
+    command: bin/node $SNAP/bin/gitmoji
